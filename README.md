@@ -1,2 +1,0 @@
-# Adhikosha
-## Bank App
