@@ -5,6 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Set;
 
 import org.slf4j.Logger;
@@ -96,25 +97,25 @@ private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
 		return false;
 	}
 
-//	public User saveUser(User user) {
-//		return userDao.save(user);
-//	}
-//
-//	public void enableUser(String username) {
-//		User user = findByUsername(username);
-//		user.setEnabled(true);
-//		userDao.save(user);
-//	}
-//
-//	public void disableUser(String username) {
-//		User user = findByUsername(username);
-//		user.setEnabled(false);
-//		System.out.println(user.isEnabled());
-//		userDao.save(user);
-//		System.out.println(username + " is disabled.");
-//	}
-//
-//	public List<User> findUserList() {
-//        return userDao.findAll();
-//    }
+	public User saveUser(User user) {
+		return userDao.save(user);
+	}
+
+	public void enableUser(String username) {
+		User user = findByUsername(username);
+		user.setEnabled(true);
+		userDao.save(user);
+	}
+
+	public void disableUser(String username) {
+		User user = findByUsername(username);
+		user.setEnabled(false);
+		System.out.println(user.isEnabled());
+		userDao.save(user);
+		System.out.println(username + " is disabled.");
+	}
+
+	public List<User> findUserList() {
+        return userDao.findAll();
+    }
 }

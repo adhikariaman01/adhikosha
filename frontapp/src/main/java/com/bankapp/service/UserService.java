@@ -16,11 +16,9 @@ public interface UserService {
 	
 	void save(User user);
 	User createUser(User user, Set<UserRole> userRoles);
-//	User saveUser(User user);
+	User saveUser(User user);
 	
-//	List<User> findUserList();
-
-//    void enableUser (String username);
-
-//    void disableUser (String username);
+	List<User> findUserList();
+    void enableUser (String username);
+    void disableUser (String username);
 }
